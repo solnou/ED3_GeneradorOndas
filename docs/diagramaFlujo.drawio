@@ -1,0 +1,287 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" version="24.8.6" pages="2">
+  <diagram name="Idea 1" id="8t9azn41UaOsZCPzI6aP">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="1jDsByAUzvnRf4fNVJOy-2" value="main()" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="180" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="1jDsByAUzvnRf4fNVJOy-3" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="1jDsByAUzvnRf4fNVJOy-2" target="1jDsByAUzvnRf4fNVJOy-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="410" y="410" as="sourcePoint" />
+            <mxPoint x="180" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1jDsByAUzvnRf4fNVJOy-4" value="generar funciones que almacenen en memoria las formas de onda&lt;div&gt;La carga sera manual, logica a implementar&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="310" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="UydthGBFS0OM4VH-kCMh-1" value="configDAC" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="420" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1jDsByAUzvnRf4fNVJOy-6" value="&lt;p style=&quot;&quot; class=&quot;MsoNormal&quot;&gt;&lt;b&gt;&lt;span style=&quot;line-height: 107%;&quot;&gt;GENERADOR DE ONDAS:&lt;/span&gt;&lt;/b&gt;&lt;span style=&quot;line-height: 107%;&quot;&gt; Con el DAC generamos las formas de onda con los datos guardados en un buffer. Los valores van al DAC mediante DMA como M2P. La frecuencia de la señal se controla mediante un potenciómetro conectado al ADC, que realiza la conversión en intervalos regulares determinados por el TIMER. La forma de onda es arbitraria generada en Python y transmitida a la placa por UART a través de un puerto serial. Mediante comunicación I2C vamos a mostrar en un display una barra correspondiente a la frecuencia seleccionada.&lt;/span&gt;&lt;/p&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="98.5" y="10" width="681" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="1jDsByAUzvnRf4fNVJOy-7" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="1jDsByAUzvnRf4fNVJOy-4" target="UydthGBFS0OM4VH-kCMh-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="210" y="610" as="sourcePoint" />
+            <mxPoint x="260" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UydthGBFS0OM4VH-kCMh-8" value="configADC" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="530" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="UydthGBFS0OM4VH-kCMh-9" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="UydthGBFS0OM4VH-kCMh-1" target="UydthGBFS0OM4VH-kCMh-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="480" as="sourcePoint" />
+            <mxPoint x="440" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1jDsByAUzvnRf4fNVJOy-14" value="configDMA" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="650" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="UydthGBFS0OM4VH-kCMh-10" value="para generar las ondas" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="240" y="440" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UydthGBFS0OM4VH-kCMh-11" value="para potenciometro que modifique la amplitud&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="250" y="545" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1jDsByAUzvnRf4fNVJOy-15" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="UydthGBFS0OM4VH-kCMh-8" target="1jDsByAUzvnRf4fNVJOy-14">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="210" y="570" as="sourcePoint" />
+            <mxPoint x="260" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UydthGBFS0OM4VH-kCMh-12" value="de memoria a dac" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="242.5" y="665" width="85" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1jDsByAUzvnRf4fNVJOy-16" value="configUART" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="760" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1jDsByAUzvnRf4fNVJOy-17" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="1jDsByAUzvnRf4fNVJOy-14" target="1jDsByAUzvnRf4fNVJOy-16">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="210" y="770" as="sourcePoint" />
+            <mxPoint x="260" y="720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1jDsByAUzvnRf4fNVJOy-19" value="configTIMER" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="880" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1jDsByAUzvnRf4fNVJOy-20" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="1jDsByAUzvnRf4fNVJOy-16" target="1jDsByAUzvnRf4fNVJOy-19">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="210" y="1010" as="sourcePoint" />
+            <mxPoint x="260" y="960" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UydthGBFS0OM4VH-kCMh-14" value="medir intervalo cada tanto actualiza el ADC" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="240" y="895" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UydthGBFS0OM4VH-kCMh-16" value="para definir forma de onda y frecuencia" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="242.5" y="775" width="85" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UydthGBFS0OM4VH-kCMh-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="UydthGBFS0OM4VH-kCMh-11" target="UydthGBFS0OM4VH-kCMh-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UydthGBFS0OM4VH-kCMh-20" value="ADC_IQRHandler" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="379.5" y="1130" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="UydthGBFS0OM4VH-kCMh-21" value="Convertir el valor del ADC&amp;nbsp;&lt;div&gt;4096 ----&amp;gt; 512&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;valor_conversión&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;&lt;/span&gt;&amp;nbsp;---&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;gt; amplitud_nueva&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="329.5" y="1280" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1jDsByAUzvnRf4fNVJOy-25" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="1jDsByAUzvnRf4fNVJOy-19">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="270" y="850" as="sourcePoint" />
+            <mxPoint x="180" y="990" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UydthGBFS0OM4VH-kCMh-24" value="amplitud_nueva == amplitud_anterior?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="359" y="1384" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="UydthGBFS0OM4VH-kCMh-25" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="UydthGBFS0OM4VH-kCMh-21" target="UydthGBFS0OM4VH-kCMh-24">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="460" y="1560" as="sourcePoint" />
+            <mxPoint x="510" y="1510" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UydthGBFS0OM4VH-kCMh-26" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="UydthGBFS0OM4VH-kCMh-24">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="434" y="1574" as="sourcePoint" />
+            <mxPoint x="439" y="1504" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1jDsByAUzvnRf4fNVJOy-27" value="UART0_IRQHandler" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="1190" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="1jDsByAUzvnRf4fNVJOy-28" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="1jDsByAUzvnRf4fNVJOy-27" target="1jDsByAUzvnRf4fNVJOy-29">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="20" y="1315" as="sourcePoint" />
+            <mxPoint x="150" y="1280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UydthGBFS0OM4VH-kCMh-27" value="no" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="434" y="1464" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1jDsByAUzvnRf4fNVJOy-29" value="tomar valor de frecuencia y tipo de onda" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="76" y="1280" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1jDsByAUzvnRf4fNVJOy-31" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="1jDsByAUzvnRf4fNVJOy-32">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="150" y="1340" as="sourcePoint" />
+            <mxPoint x="150" y="1380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UydthGBFS0OM4VH-kCMh-28" value="generar_funcion(amplitud_nueva, )" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="344" y="1504" width="190" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="1jDsByAUzvnRf4fNVJOy-32" value="actualizar valor de timeout de DAC para generar la frecuencia de salida deseada" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="75" y="1390" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1jDsByAUzvnRf4fNVJOy-33" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="1jDsByAUzvnRf4fNVJOy-29" target="1jDsByAUzvnRf4fNVJOy-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1jDsByAUzvnRf4fNVJOy-34" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="1jDsByAUzvnRf4fNVJOy-32" target="1jDsByAUzvnRf4fNVJOy-35">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="170" y="1470" as="sourcePoint" />
+            <mxPoint x="150" y="1490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1jDsByAUzvnRf4fNVJOy-35" value="Limpio flag" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="75" y="1490" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1jDsByAUzvnRf4fNVJOy-37" value="fin" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="1600" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="UydthGBFS0OM4VH-kCMh-29" value="amplitud_nueva = amplitud_anterior" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="344" y="1594" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="UydthGBFS0OM4VH-kCMh-30" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="UydthGBFS0OM4VH-kCMh-28" target="UydthGBFS0OM4VH-kCMh-29">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="654" y="1594" as="sourcePoint" />
+            <mxPoint x="704" y="1544" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1jDsByAUzvnRf4fNVJOy-39" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="1jDsByAUzvnRf4fNVJOy-35" target="1jDsByAUzvnRf4fNVJOy-37">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="160" y="1350" as="sourcePoint" />
+            <mxPoint x="160" y="1400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1jDsByAUzvnRf4fNVJOy-40" value="while" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="990" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1jDsByAUzvnRf4fNVJOy-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="1jDsByAUzvnRf4fNVJOy-40" target="1jDsByAUzvnRf4fNVJOy-40">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="210" y="1100" />
+              <mxPoint x="150" y="1100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1jDsByAUzvnRf4fNVJOy-42" value="TIMERx_IRQHandler" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="635" y="1190" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="1jDsByAUzvnRf4fNVJOy-43" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="1jDsByAUzvnRf4fNVJOy-42" target="1jDsByAUzvnRf4fNVJOy-44">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="565" y="1315" as="sourcePoint" />
+            <mxPoint x="695" y="1280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1jDsByAUzvnRf4fNVJOy-44" value="iniciar conversion ADC" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="1280" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1jDsByAUzvnRf4fNVJOy-45" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="1jDsByAUzvnRf4fNVJOy-46">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="695" y="1340" as="sourcePoint" />
+            <mxPoint x="695" y="1380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1jDsByAUzvnRf4fNVJOy-46" value="habilitar interrupción ADC" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="1390" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1jDsByAUzvnRf4fNVJOy-47" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="1jDsByAUzvnRf4fNVJOy-44" target="1jDsByAUzvnRf4fNVJOy-46">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1jDsByAUzvnRf4fNVJOy-48" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="1jDsByAUzvnRf4fNVJOy-46" target="1jDsByAUzvnRf4fNVJOy-50">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="715" y="1470" as="sourcePoint" />
+            <mxPoint x="740" y="1480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1jDsByAUzvnRf4fNVJOy-50" value="fin" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="635" y="1490" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="UydthGBFS0OM4VH-kCMh-35" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="UydthGBFS0OM4VH-kCMh-29" target="UydthGBFS0OM4VH-kCMh-33">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="484" y="1794" as="sourcePoint" />
+            <mxPoint x="534" y="1744" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UydthGBFS0OM4VH-kCMh-36" value="si" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="499" y="1394" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UydthGBFS0OM4VH-kCMh-38" value="Return" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="409" y="1724" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UydthGBFS0OM4VH-kCMh-33" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="429" y="1704" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="UydthGBFS0OM4VH-kCMh-34" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=elbowEdgeStyle;" edge="1" parent="1" source="UydthGBFS0OM4VH-kCMh-24" target="UydthGBFS0OM4VH-kCMh-33">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="584" y="1454" as="sourcePoint" />
+            <mxPoint x="634" y="1404" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="554" y="1574" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UydthGBFS0OM4VH-kCMh-42" value="valor_conversión =&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;AD0DRx&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="1210" width="199" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UydthGBFS0OM4VH-kCMh-43" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="UydthGBFS0OM4VH-kCMh-20" target="UydthGBFS0OM4VH-kCMh-42">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="550" y="1100" as="sourcePoint" />
+            <mxPoint x="600" y="1050" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UydthGBFS0OM4VH-kCMh-44" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="UydthGBFS0OM4VH-kCMh-42" target="UydthGBFS0OM4VH-kCMh-21">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="590" y="1140" as="sourcePoint" />
+            <mxPoint x="640" y="1090" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="c0mVH30cweUMzajYkAQQ" name="Idea 2">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="a0DGqpdGXCvXFgOKD8zp-1" value="GENERADOR DE ONDAS:&amp;nbsp;Este proyecto implementa un generador de señales utilizando la placa LPC1769, capaz de generar formas de onda básicas (senoidal y cuadrada) con parámetros ajustables. Los parametros que se pueden ajustar son: forma de onda, frecuencia y amplitud.Todos ellos seran recibidos por comunicación UART.&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Como configuracion inciial, para la primera vez que se usa el dispositivo, se van a tomar muestras de un generador de onda externo, con el objetivo de replicarlas en memoria para que luego sean ajustables&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="79" y="40" width="681" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Yof6SMG_vATm6VzrYzHy-1" value="main" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="180" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Yof6SMG_vATm6VzrYzHy-2" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Yof6SMG_vATm6VzrYzHy-1" target="Yof6SMG_vATm6VzrYzHy-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="630" y="390" as="sourcePoint" />
+            <mxPoint x="400" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Yof6SMG_vATm6VzrYzHy-3" value="almacenar valores para replicar las ondas que ingrearon por ADC" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="310" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Yof6SMG_vATm6VzrYzHy-4" value="configTimer" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="450" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Yof6SMG_vATm6VzrYzHy-5" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Yof6SMG_vATm6VzrYzHy-3" target="Yof6SMG_vATm6VzrYzHy-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="430" y="590" as="sourcePoint" />
+            <mxPoint x="480" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
